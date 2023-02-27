@@ -14,3 +14,37 @@
 
 <img width="666" alt="image" src="https://user-images.githubusercontent.com/77828396/221528148-2230540a-cdaf-4aa7-b87f-410238d1475d.png">
 
+3. Create job type Multibranch Pipeline and add the credintioals and repo url and run
+
+3. Create file name Jenkinsfile with following content
+
+    pipeline {
+    
+        agent any
+    
+        stages {
+    
+            stage("build"){
+                
+                steps {
+                    echo 'building the application'
+                }
+            }
+    
+            stage("test"){
+                
+                steps {
+                    echo 'testing the application'
+                }
+            }
+    
+            stage("deploy"){
+                
+                steps {
+                    echo 'deploying the application'
+                }
+            }
+    
+        }
+    }
+
